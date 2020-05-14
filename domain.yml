@@ -1,0 +1,97 @@
+slots:
+   size:
+    type: text
+   pizza_type:
+    type: text
+   toppings:
+    type: text
+   what_is_pizza_cost:
+    type: text
+   what_is_available_pizza:
+    type: text
+
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - order_pizza
+  - what_is_available_pizza
+  - what_is_pizza_cost
+  - thanks
+  
+  
+
+entities:
+  - size
+  - toppings
+  - pizza_type
+ 
+actions:
+- utter_greet
+- utter_thank
+- utter_bye
+- utter_show_pizza_cost
+- utter_show_available_pizza
+- utter_confirm_order1
+- utter_confirm_order2
+- utter_name_toppings
+- utter_ask_toppings
+- utter_ask_size
+- utter_ask_type
+- utter_fallback
+
+templates:
+  utter_greet:
+  - text: "Hey there! :) What you want?"
+  utter_thanks:
+  - text: "You're welcome!"
+  
+  utter_size:
+  - text: "What size pizza you want ?"
+
+  utter_ask_size:
+  - text: "what pizza size do you want?"
+  - text: "which size would you like?"
+  
+  utter_ask_type:
+  - text: "We have BBQ, Hawaiian, Bacon Cheeseburger, and Buffalo chicken pizzas, which one do you want"
+  
+  utter_ask_toppings:
+  - text: "Do you want any toppings?"
+  
+  utter_name_toppings:
+  - text:"We have mushrooms, onions, bacon, green peppers and sausage toppings,which would you like?
+   
+  utter_confirm_order1:
+  - text: "You just ordered a {size} {pizza_type} pizza with {toppings}. We will 	contact you when we are the closest place to the given address."
+  
+  utter_confirm_order2:
+  - text: "You just ordered a {size} {pizza_type} pizza. We will contact you when we are at the closest place to the given address."
+   
+  utter_fallback:
+  - text: "sorry, I did not get you..."
+   
+  utter_show_available_pizza:
+  - text: 'We have BBQ, Hawaiian, Bacon CheeseBurger and Buffalo Chicken pizzas in all sizes, small, medium, large and extra large'
+   
+  utter_show_pizza_cost:
+  - text: 'All small pizzas cost $13. Medium BBQ, Bacon and Buffalo pizzas cost'
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
